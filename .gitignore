@@ -2,3 +2,10 @@
 PSD-Templates/
 output/
 __pycache__
+.git
+Include/
+Lib/
+activatePythonEnvironment.bat.lnk
+Scripts/
+pip-selfcheck.json
+pyenv.cfg
