@@ -8,4 +8,4 @@ Lib/
 activatePythonEnvironment.bat.lnk
 Scripts/
 pip-selfcheck.json
-pyenv.cfg
+pyvenv.cfg
