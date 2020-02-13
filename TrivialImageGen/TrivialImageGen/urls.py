@@ -16,7 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+
 urlpatterns = [
-    path('generate/', include('ImageGenerator.urls')),
+    path('image/', include('ImageGenerator.urls')),
     path('admin/', admin.site.urls),
 ]
+
+
