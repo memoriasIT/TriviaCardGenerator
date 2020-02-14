@@ -1,7 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 
+from django.conf import settings
+
 from .models import Image
+
 
 import generatorModule
 
@@ -20,6 +23,9 @@ def image(request, id):
 
 
 def generateImage(request):
-    generatorModule.genImageMain("test")
+    path = str(settings.STATICFILES_DIRS[0]) + "/test"
+    print(path)
+    generatorModule.genImageMain(path)
+
 
     return HttpResponse("Maybe Worked")
