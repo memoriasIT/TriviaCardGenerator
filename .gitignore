@@ -10,3 +10,5 @@ Scripts/
 pip-selfcheck.json
 pyvenv.cfg
 TrivialImageGen/static/
+TrivialImageGen/db.sqlite3
+
