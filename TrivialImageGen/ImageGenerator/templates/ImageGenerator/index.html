@@ -1,9 +1,17 @@
 {% if image_list %}
+<<<<<<< HEAD
   <ul>
+=======
+    <ul>
+>>>>>>> e32b6aa47ae50dbdcdf5e704e63ab993dcc4d80a
     {% for image in image_list %}
         <li><a href="/image/{{ image.id }}">{{ image.name }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
+<<<<<<< HEAD
     <p>No images were created.</p>
+=======
+    <p>No images are available.</p>
+>>>>>>> e32b6aa47ae50dbdcdf5e704e63ab993dcc4d80a
 {% endif %}

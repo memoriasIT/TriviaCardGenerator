@@ -16,7 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+<<<<<<< HEAD
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+=======
+>>>>>>> e32b6aa47ae50dbdcdf5e704e63ab993dcc4d80a
 
 urlpatterns = [
     path('image/', include('ImageGenerator.urls')),
@@ -24,4 +27,7 @@ urlpatterns = [
 ]
 
 
+<<<<<<< HEAD
 urlpatterns += staticfiles_urlpatterns()
+=======
+>>>>>>> e32b6aa47ae50dbdcdf5e704e63ab993dcc4d80a
