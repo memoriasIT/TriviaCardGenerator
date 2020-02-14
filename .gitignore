@@ -9,3 +9,4 @@ activatePythonEnvironment.bat.lnk
 Scripts/
 pip-selfcheck.json
 pyvenv.cfg
+TrivialImageGen/static/

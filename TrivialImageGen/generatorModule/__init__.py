@@ -75,8 +75,7 @@ def generateImage(qst, strSave):
     # Set Logger to print info too (change if wanted)
     logging.basicConfig(level = logging.INFO)
     log = logging.getLogger("ImageGenerator")
-    #path = os.path.dirname(__file__)
-    path = os.getcwd()
+    path = os.path.join(os.path.dirname(os.path.abspath("__file__")), "generatorModule")
 
     # Use JSON file as database for better search times
     try:
@@ -142,7 +141,7 @@ def generateImage(qst, strSave):
             idx += 1
 
         # Save Image without answers
-        img.save(os.path.join(path, "output/"+strSave+"_0.png"))
+        img.save(strSave+"_0.png")
         log.info("Image WITHOUT answers was saved successfully")
 
         # Draw correct answer in the same position (overwritten in green)
@@ -154,7 +153,7 @@ def generateImage(qst, strSave):
             y_text += font.getsize(line)[1]+10
 
         # Save image with answer
-        img.save(os.path.join(path, "output/"+strSave+"_1.png"))
+        img.save(strSave+"_1.png")
         log.info("Image WITH answers was saved successfully")
 
     except IOError as e:
