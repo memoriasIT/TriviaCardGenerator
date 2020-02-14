@@ -1,0 +1,28 @@
+{"_default": {  "1": {"category": "Any Category", "icon": "assets/icons/toFix.png", "background": "assets/bg/ClearBluePost.png"}, 
+                "2": {"category": "General Knowledge", "icon": "assets/icons/knowledge.png", "background": "assets/bg/ClearBluePost.png"},
+                "3": {"category": "Entertainment: Books", "icon": "assets/icons/YellowHistoryIcon.png", "background": "assets/bg/OrangePost.png"},
+                "4": {"category": "Entertainment: Film", "icon": "assets/icons/video-camera.png", "background": "assets/bg/OrangePost.png"},
+                "5": {"category": "Entertainment: Music", "icon": "assets/icons/music-player.png", "background": "assets/bg/OrangePost.png"},
+                "6": {"category": "Entertainment: Musicals & Theatres", "icon": "assets/icons/music-player.png", "background": "assets/bg/OrangePost.png"},
+                "7": {"category": "Entertainment: Television", "icon": "assets/icons/video-camera.png", "background": "assets/bg/OrangePost.png"},
+                "8": {"category": "Entertainment: Video Games", "icon": "assets/icons/PinkEntertainmentIcon.png", "background": "assets/bg/OrangePost.png"},
+                "9": {"category": "Entertainment: Board Games", "icon": "assets/icons/chess.png", "background": "assets/bg/OrangePost.png"},
+                "10": {"category": "Science & Nature", "icon": "assets/icons/GreenScienceIcon.png", "background": "assets/bg/GreenPost.png"},
+                "11": {"category": "Science: Computers", "icon": "assets/icons/laptop.png", "background": "assets/bg/GreyPost.png"},
+                "12": {"category": "Science: Mathematics", "icon": "assets/icons/maths.png", "background": "assets/bg/BluePost.png"},
+                "13": {"category": "Mythology", "icon": "assets/icons/greek.png", "background": "assets/bg/YellowPost.png"},
+                "14": {"category": "Sports", "icon": "assets/icons/OrangeSportsIcon.png", "background": "assets/bg/RedPost.png"},
+                "15": {"category": "Geography", "icon": "assets/icons/BlueGeographyIcon.png", "background": "assets/bg/YellowPost.png"},
+                "16": {"category": "History", "icon": "assets/icons/YellowHistoryIcon.png", "background": "assets/bg/YellowPost.png"},
+                "17": {"category": "Politics", "icon": "assets/icons/politics.png", "background": "assets/bg/YellowPost.png"},
+                "18": {"category": "Art", "icon": "assets/icons/RedArtIcon.png", "background": "assets/bg/PinkPost.png"},
+                "19": {"category": "Celebrities", "icon": "assets/icons/video-camera.png", "background": "assets/bg/OrangePost.png"},
+                "20": {"category": "Animals", "icon": "assets/icons/GreenScienceIcon.png", "background": "assets/bg/GreenPost.png"},
+                "21": {"category": "Vehicles", "icon": "assets/icons/toFix.png", "background": "assets/bg/BluePost.png"},
+                "22": {"category": "Entertainment: Comics", "icon": "assets/icons/YellowHistoryIcon.png", "background": "assets/bg/OrangePost.png"},
+                "23": {"category": "Science: Gadgets", "icon": "assets/icons/phone.png", "background": "assets/bg/GreyPost.png"},
+                "24": {"category": "Entertainment: Cartoon & Animations", "icon": "assets/icons/video-camera.png", "background": "assets/bg/OrangePost.png"},
+                "25": {"category": "Entertainment: Japanese Anime & Manga", "icon": "assets/icons/YellowHistoryIcon.png", "background": "assets/bg/OrangePost.png"}
+
+            }
+}
