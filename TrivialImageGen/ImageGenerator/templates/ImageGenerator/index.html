@@ -1,9 +1,73 @@
-{% if image_list %}
-    <ul>
-    {% for image in image_list %}
-        <li><a href="/image/{{ image.id }}">{{ image.name }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No images are available.</p>
-{% endif %}
+{% extends "ImageGenerator/base.html" %}
+
+{% block content %}
+<style>
+.gallery li {
+   float: left;
+   width: 33%;
+   height:auto;
+   overflow:hidden;
+}
+
+.imagePreview {
+        width: 75%;
+        padding: 10px;
+}
+
+
+@media (max-width: 768px) { 
+    .gallery li {
+        width: 50%;
+    }
+  
+}
+
+@media (max-width: 576px) { 
+    .gallery li {
+        width: 100%;
+    }
+}
+</style>
+
+<div class="gallery">
+        {% if image_list %}
+        <ul>
+        {% for image in image_list %}
+            <li>
+                <div >
+                    <div><a href="/image/{{ image.id }}"><img class="imagePreview" src="/{{ image.image.url }}" ></a></div>
+                    <div width="150px">
+                        <a href="/image/{{ image.id }}">{{ image.name }}</a>
+                        <a data-toggle="tooltip" title="{{ image.data }}">
+
+                        <!-- Was this uploaded to instagram? -->
+                        {% if image.uploaded %} <input checked type="checkbox">
+                        {% else %} <input type="checkbox"> 
+                        {% endif %}
+                        
+                        <!-- Preview image when mouse over -->
+                        <p class="text-muted">Hover to see image details</p>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No images are available.</p>
+    {% endif %}
+
+
+</div>
+
+
+<!-- Display Image when hover -->
+<script>
+$('a[data-toggle="tooltip"]').tooltip({
+    animated: 'fade',
+    placement: 'bottom',
+    html: true
+});
+</script>
+{% endblock content %}
+

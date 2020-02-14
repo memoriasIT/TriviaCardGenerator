@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.6
+#!/usr/bin/env python3.8
 # coding=utf-8
 
 # Get data from OpenTriviaDatabase
@@ -66,6 +66,10 @@ class Question:
 
         # Make the correct answer be in a random place in the list (shuffle)
         return (random.sample(answerlist, len(answerlist)), self.correctAnswer)
+    
+    def toString(self):
+        return "Category: "+self.category + "\nQuestion: " + self.qst +"\nType: " + self.type 
+        
 
 #  __________________________________________
 # [          - GENERATE IMAGE -             ]
@@ -163,6 +167,7 @@ def generateImage(qst, strSave):
         log.error(e)
         sys.exit(1)
 
+    return qst.toString()
 
 #  __________________________________________
 # [          -       MAIN      -             ]
@@ -174,7 +179,7 @@ def genImageMain(strSave):
     q1 = Question()
 
     # Generate image
-    generateImage(q1, strSave)
+    return generateImage(q1, strSave)
 
 
 

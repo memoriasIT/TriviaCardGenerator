@@ -5,6 +5,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 
+from django.contrib.auth.decorators import login_required
+
 from django.conf import settings # static files dirs
 
 from django.utils import timezone
@@ -45,15 +47,21 @@ def image(request, id):
 #
 # URL -> /image/generate
 # path('generate/', views.generateImage, name='generateImage'),
+@login_required()
 def generateImage(request):
-    # Generate Images for object
+    # required data
     time = timezone.now() 
     path = str(settings.STATICFILES_DIRS[0]) + "/temp"
-    generatorModule.genImageMain(path)
+    
+    # Generate image and save data from it
+    imageData = generatorModule.genImageMain(path)
+
+    print(imageData)
 
     # Create object in database
-    tempImage = Image.objects.create(name=str(time), pub_date=time)
+    tempImage = Image.objects.create(name=str(time), pub_date=time, data=str(imageData))
     tempImage.image.save(str(time)+'_0.png', File(open('static/temp_0.png', 'rb')))
     tempImage.imageSol.save(str(time)+'_1.png', File(open('static/temp_1.png', 'rb')))
+
 
     return render(request, 'ImageGenerator/image.html', {'image': tempImage})
